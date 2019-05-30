@@ -11,9 +11,10 @@ function area (b,h){
 var b = parseInt(prompt("introduce la medida de la base"));
 var h = parseInt(prompt("introduce la medida de la altura"));
 var calArea= (b * h) / 2;
-
 alert("el área de tu triángulo es :" + calArea);
 }
+
+
 
 // Voltea una string dada por el usuario
 function volteaString(){
@@ -44,6 +45,7 @@ alert("la cadena invertida es: "+ cadenarevertida);
   60C: 140F
   45C: 7.222222222222222C
 */
+
 function convErt(){ 
 var equiv = parseInt(prompt("¿Cuántos grados quieres convertir?"));
 var unidad = prompt("Escribe si quieres convertir a C o F");
@@ -95,6 +97,16 @@ if ( n1 >= 0 & n2>= 0)
 
 
 // Para sumar n números hasta que ingrese un negativo
+var num1 = parseInt(prompt("introduce un número"));
+var numSum = 0;
+
+while (num1>=0){
+  numSum += num1;
+  var num1 = parseInt(prompt("Ingresa un número"))
+}
+alert('La suma es '+ ' '+ numSum);
+
+
 /*
 function sumaPositiva(){
   var n1 = parseInt(prompt("Introduce un número"));
@@ -131,9 +143,8 @@ alert(cadenita.replace(/\b\w/g, l => l.toUpperCase()))
 // Revisa si un número dado es múltiplo de 3 o de 7
 function multiple(valor, multiple){
   var valor = parseInt(prompt("Ingresa el número que quieres revisar"));
-  var multiple = parseInt (prompt("Introduce el múltiplo que quieres explorar"));
+  var multiple = parseInt(prompt("Introduce el múltiplo que quieres explorar"));
   resto = valor % multiple;
-
     if(resto % 3 === 0) {
         alert("el número " + valor + " es múltiplo de " + multiple);
       } else if (resto % 7 === 0){
@@ -146,13 +157,50 @@ function multiple(valor, multiple){
 
 // Revisa cuantas veces se repite un caracter dado en una cadena dada
 
-var tuCadena = prompt("Introduce tu texto");
+
 
 
 // Revisa cuantas veces se repite un valor dado en un arreglo
+function valorDeArreglo (valor, arr){
+  var valor = parseInt(prompt("Introduce un valor a buscar").value);
+  var valores = 0;
+  var arr = [];
+
+  while(valores >=0){
+    arr.push(valores);
+    valores = prompt("Introduce un valor numérico: "); 
+  }
+  var conta = 0;
+  for (i = 0; i < arr.length; i++){
+    if (arr[i] == valor){
+      conta ++;
+    }
+  }
+  alert(conta);
+};
+
+
+
+
+
 // Divide un número de 3 dígitos en sus centenas, decenas y unidades
-  // 103 -> 1 centena, 0 decenas, 3 unidades
+// 103 -> 1 centena, 0 decenas, 3 unidades
+
+function numCentenas(cantidad){
+  var num = cantidad.toString().split(' ');
+  var resultado = num[0]+" centenas, "+ num[1]+ " decenas," + num[2] + " unidades";
+  alert(resultado);
+}
+numCentenas(563);
+
+
 // Regresa todos los caracteres que no sean letras de una cadena
+function puraLetra(){
+  var 
+}
+
+
+
 // Haz una función que lanza un error con el mensaje dado por el usuario
 // Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
 // Suma los contenidos de un arreglo de números
