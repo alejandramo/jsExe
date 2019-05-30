@@ -54,20 +54,60 @@ var unidad = prompt("Escribe si quieres convertir a C o F");
     }
 }
 
+
 // Crea un objeto que tenga una propiedad cuyo nombre es definido por el usuario. Su valor debe ser verdadero
 /*
   si prop es el nombre,
   a  = {};
   a.prop = true
 */
-var usuario = {
-     nombre : " ",
-     edad : 34,
-     nacionalidad: Mexicana,     
+// Definimos el objeto al que se le agregará la propiedad
+var usuario={
+  nombre:'blarz',
+  apellido:'Hernandez'
 }
-function putNombre (){
-    var nombreNuevo = prompt("escribe el nombre del usuario");
-    usuario.nombre = nombreNuevo;
-    alert(usuario);
+//Creamos la función
+function agregarPropiedad(obj){
+  var nuevaPropiedad = prompt("Escribe la propiedad que quieres agregar al objeto");
+  var nuevoValorPropiedad = prompt("Escribe el valor de la propiedad");
+  return Object.defineProperty(obj,nuevaPropiedad,{value: nuevoValorPropiedad});
+}
+//Agregamos el la propiedad y su valor al objeto
+var objeto = agregarPropiedad(usuario);
+console.log(usuario);
+// Asignamos el valor de tue a la nueva propiedad
+usuario.nuevaPropiedad = true;
+
+
+// Realiza la suma de los valores que de el usuario hasta recibir un valor negativo
+
+// Para sumar dos números hasta que uno de los dos es negativo
+function sumaPositiva(){
+var n1 = parseInt(prompt("Introduce un número"));
+var n2 = parseInt(prompt("Introduce el segundo número"));
+if ( n1 >= 0 & n2>= 0)
+  alert("La suma es " + (n1+n2));
+ 
+ else 
+  alert("Lo sentimos, tienes que agregar un número positivo, inténtalo nuevamente introduciendo sólo números positivos");
+  sumaPositiva();
 }
 
+
+// Para sumar n números hasta que ingrese un negativo
+function sumaPositiva(){
+  var n1 = parseInt(prompt("Introduce un número"));
+  var n2 = parseInt(prompt("Introduce el segundo número"));
+  if ( n1 >= 0 & n2>= 0)
+    alert("La suma es " + (n1+n2));
+   
+   else 
+    alert("Lo sentimos, tienes que agregar un número positivo, inténtalo nuevamente introduciendo sólo números positivos");
+    sumaPositiva();
+  }
+function sumaOno(){
+  numPos = parseInt(prompt("Introduce un número");
+  for (numPos >=0){
+    var n2= prompt("introduce otro número")
+  } 
+}
