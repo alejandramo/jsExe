@@ -95,6 +95,7 @@ if ( n1 >= 0 & n2>= 0)
 
 
 // Para sumar n números hasta que ingrese un negativo
+/*
 function sumaPositiva(){
   var n1 = parseInt(prompt("Introduce un número"));
   var n2 = parseInt(prompt("Introduce el segundo número"));
@@ -106,8 +107,80 @@ function sumaPositiva(){
     sumaPositiva();
   }
 function sumaOno(){
-  numPos = parseInt(prompt("Introduce un número");
-  for (numPos >=0){
-    var n2= prompt("introduce otro número")
+  numPos = parseInt(prompt("Introduce un número")
+  while (numPos >=0){
+    var n2= prompt("Introduce otro número")
   } 
 }
+*/
+// Agregar un ciclo para recibir n números
+// Siempre que el número recibido sea + / hacer suma de los números / mostrar el resultado y pedir un nuevo número
+// Cuando el usuario introduzca un -, detener la suma y pedir que se introduzca un +
+
+
+
+
+
+// Convierte a mayúscula la primer letra de cada palabra en una cadena dada por el usuario
+function convertirCadenita(){
+var cadenita = prompt("Introduce una frase :): ");
+alert(cadenita.replace(/\b\w/g, l => l.toUpperCase())) 
+}
+
+
+// Revisa si un número dado es múltiplo de 3 o de 7
+function multiple(valor, multiple){
+  var valor = parseInt(prompt("Ingresa el número que quieres revisar"));
+  var multiple = parseInt (prompt("Introduce el múltiplo que quieres explorar"));
+  resto = valor % multiple;
+
+    if(resto % 3 === 0) {
+        alert("el número " + valor + " es múltiplo de " + multiple);
+      } else if (resto % 7 === 0){
+        alert("el número " + valor + " es múltiplo de " + multiple);
+      } else{ 
+        alert("el número que introdujiste no es múltiplo de 3 o 7");
+      }
+}
+
+
+// Revisa cuantas veces se repite un caracter dado en una cadena dada
+
+var tuCadena = prompt("Introduce tu texto");
+
+
+// Revisa cuantas veces se repite un valor dado en un arreglo
+// Divide un número de 3 dígitos en sus centenas, decenas y unidades
+  // 103 -> 1 centena, 0 decenas, 3 unidades
+// Regresa todos los caracteres que no sean letras de una cadena
+// Haz una función que lanza un error con el mensaje dado por el usuario
+// Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
+// Suma los contenidos de un arreglo de números
+// Regresa un arreglo nuevo con el cuadrado de cada valor del arreglo original
+// Regresa que tipo de ángulo es el dado
+/*
+  Agudo: 0 a 90 grados
+  Recto: 90 grados
+  Obtuso: 90 a 180 grados
+  Llano: 180 grados
+*/
+// Regresa un arreglo nuevo sin los valores repetidos de un arreglo original
+// Quita los valores repetidos de un arreglo (sin usar otro arreglo)
+// Convierte un número binario dado por el usuario a decimal
+// Convierte un número decimal dado por el usuario a binario, octal y hexadecimal (bases 2, 8 y 16)
+// Regresa la cantidad de valores que comparten dos arreglos diferentes
+// Valida que una cadena dada no tenga espacios en blanco
+// Dada una cadena, determina su valor de scrabble
+/*
+  1: E, A, I, O, N, R, T, L, S, U
+  2: D, G
+  3: B, C, M, P
+  4: F, H, V, W, Y
+  5: K
+  8: J, X
+  10: Q, Z
+*/
+// Determina si una cadena dada por el usuario es un acrónimo
+// Implementa una lista ligada
+// Implementa una lista doblemente ligada
+// Obten el Máximo común divisor de dos números dados
