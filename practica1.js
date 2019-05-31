@@ -137,7 +137,7 @@ function sumaOno(){
 function convertirCadenita(){
 var cadenita = prompt("Introduce una frase :): ");
 alert(cadenita.replace(/\b\w/g, l => l.toUpperCase())) 
-}
+};
 
 
 // Revisa si un número dado es múltiplo de 3 o de 7
@@ -152,7 +152,7 @@ function multiple(valor, multiple){
       } else{ 
         alert("el número que introdujiste no es múltiplo de 3 o 7");
       }
-}
+};
 
 
 // Revisa cuantas veces se repite un caracter dado en una cadena dada
@@ -190,20 +190,40 @@ function numCentenas(cantidad){
   var num = cantidad.toString().split(' ');
   var resultado = num[0]+" centenas, "+ num[1]+ " decenas," + num[2] + " unidades";
   alert(resultado);
-}
+};
 numCentenas(563);
 
 
 // Regresa todos los caracteres que no sean letras de una cadena
 function puraLetra(){
   var 
-}
+};
 
 
 
 // Haz una función que lanza un error con el mensaje dado por el usuario
+function errOr() {
+  var mensajeU = prompt("Escribe tu mensaje");
+  console.error(mensajeU);
+
+
 // Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
+function errOr() {
+  var mensajeU = prompt("Escribe tu mensaje");
+    try {
+    mensajeU();
+  } catch(error){
+    console.error(mensajeU);
+};
+
 // Suma los contenidos de un arreglo de números
+function sumaNumArr{
+  var ponNum = parent(prompt("Introduce un número a sumar"))
+  var arr = [ ]
+
+
+
+}
 // Regresa un arreglo nuevo con el cuadrado de cada valor del arreglo original
 // Regresa que tipo de ángulo es el dado
 /*
@@ -215,9 +235,11 @@ function puraLetra(){
 // Regresa un arreglo nuevo sin los valores repetidos de un arreglo original
 // Quita los valores repetidos de un arreglo (sin usar otro arreglo)
 // Convierte un número binario dado por el usuario a decimal
+
 // Convierte un número decimal dado por el usuario a binario, octal y hexadecimal (bases 2, 8 y 16)
 // Regresa la cantidad de valores que comparten dos arreglos diferentes
 // Valida que una cadena dada no tenga espacios en blanco
+
 // Dada una cadena, determina su valor de scrabble
 /*
   1: E, A, I, O, N, R, T, L, S, U
@@ -228,6 +250,7 @@ function puraLetra(){
   8: J, X
   10: Q, Z
 */
+
 // Determina si una cadena dada por el usuario es un acrónimo
 // Implementa una lista ligada
 // Implementa una lista doblemente ligada
