@@ -15,7 +15,6 @@ alert("el área de tu triángulo es :" + calArea);
 }
 
 
-
 // Voltea una string dada por el usuario
 function volteaString(){
     var string = prompt("introduce el texto que deseas invertir");
@@ -24,7 +23,6 @@ function volteaString(){
 
 
 // Voltea una string dada por el usuario sin usar el método de reverse
-
 var cadena = prompt("Escribe la frase que quieres invertir");
 var cadenarevertida = "";
    
