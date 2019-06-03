@@ -24,11 +24,9 @@ function volteaString(){
 
 // Voltea una string dada por el usuario sin usar el método de reverse
 var cadena = prompt("Escribe la frase que quieres invertir");
-var cadenarevertida = "";
-   
+var cadenarevertida = "";  
 //Iterar la cadena de manera inversa
-for(var i = cadena.length-1; i>=0; i--)
-{
+for(var i = cadena.length-1; i>=0; i--){
 //Se concatena el valor a la cadena resultado
   cadenarevertida += cadena[i];
 }
@@ -43,15 +41,14 @@ alert("la cadena invertida es: "+ cadenarevertida);
   60C: 140F
   45C: 7.222222222222222C
 */
-
 function convErt(){ 
 var equiv = parseInt(prompt("¿Cuántos grados quieres convertir?"));
 var unidad = prompt("Escribe si quieres convertir a C o F");
-    if (unidad.value = "F"){
-        alert("la conversión de: " + equiv + " ºC, " + "equivale a: "+((equiv*9/5)+32) + " ºF");
-    } else{
-        alert("la conversión de: " + equiv + " ºF, " + "equivale a: "+((equiv-32)*5/9) + " ºC");
-    }
+  if (unidad.value = "F"){
+      alert("la conversión de: " + equiv + " ºC, " + "equivale a: "+((equiv*9/5)+32) + " ºF");
+  } else{
+      alert("la conversión de: " + equiv + " ºF, " + "equivale a: "+((equiv-32)*5/9) + " ºC");
+  }
 }
 
 
@@ -80,6 +77,18 @@ usuario.nuevaPropiedad = true;
 
 
 // Realiza la suma de los valores que de el usuario hasta recibir un valor negativo
+function sumaSuma (){
+  var numn = parseInt(prompt("Introduce un número positivo para sumar"));
+  var num1 = parseInt(prompt("Introduce un número positivo para sumar"));  
+  do {
+    var resultado = promt("La suma de "+ numn + " + " + num1 + "   es = " + (numn+num1)+ "<br/>" + 
+                    "Introduce otro número para sumar" );
+    sumaSuma();
+  }
+  while (numn>= 0);
+}
+
+
 
 // Para sumar dos números hasta que uno de los dos es negativo
 function sumaPositiva(){

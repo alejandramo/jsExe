@@ -140,5 +140,4 @@ Promise.all([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3), Promise
 Convierte todos los ejercicios de la parte 2 a usar Async/Await
 (incluidos los de analizar la salida)
 
-
 */

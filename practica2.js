@@ -3,7 +3,7 @@ function calculateDogAge(){
     var edadHumanaDePerrit = Number(prompt("¿Cuál es la edad humana de perrit?"));
     var edadPerritDePerrit = (edadHumanaDePerrit)*7;
     alert ("Perrit tiene: " + edadPerritDePerrit + " en edad perrit");
-}
+};
 
 // Escribe una función llamada getCandySupply que reciba dos números (edad, cantidad por día) y calcule cuantos dulces consumirías por el resto de tu vida.
     // El resto de tu vida es definido por una edad constante (por ejemplo, 75 años)
@@ -11,11 +11,9 @@ function  getCandySupply(edad, cantidadXdia){
     var edad = Number(prompt("¿Cuál es tu edad?"));
     var cantidadXdia = Number(prompt("¿Cuántos dulces comes al día?"));
     const tiempodevidapromedio = Number(90);
-
     var dulcesporcomer = (365*(tiempodevidapromedio-edad)*cantidadXdia);
     alert("Si sigues comiendo " + cantidadXdia + " de dulces, cuando tengas " + tiempodevidapromedio + " te habras comido " + dulcesporcomer + " dulces");
-
-}
+};
 
 
 // Crea una función que permita encadenar llamadas
@@ -54,7 +52,7 @@ function saludaYa(){
     } else {
         alert("Sólo puedes escoger entre casual o formal D:"); 
     }
-}
+};
 
 
 //FORMA 3 -
@@ -65,7 +63,6 @@ function saludaYa(){
     function saludoCasual(){
         alert("¡Hola!");
     }
-
     let tipo = prompt("¿Prefieres un saludo formal o casual?");
     if (tipo==="formal"){
         alert(saludoFormal());
