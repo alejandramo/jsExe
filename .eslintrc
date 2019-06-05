@@ -1,0 +1,12 @@
+{
+    "extends": "airbnb"
+},
+
+Add to .eslintrc:
+"env":{
+    "browser": true
+},
+"rules":{
+   "linebreak-style": "off" 
+}
+

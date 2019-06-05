@@ -283,6 +283,21 @@ function convierteavarios(){
 }
 
 // Regresa la cantidad de valores que comparten dos arreglos diferentes
+function comparaArreglos(){
+  var array1=[1, 2, 3, 4, 5, 6, 9, 10 ]
+  var array2= [2, 4, 6, 78, 9]
+  var iguales=0;
+  
+  for(var i=0;i<array1.length;i++){
+	for(var j=0;j<array2.length;j++){
+		if(array1[i]==array2[j])
+			iguales++;
+	}
+}
+alert(iguales);
+}
+
+
 
 
 // Valida que una cadena dada no tenga espacios en blanco
