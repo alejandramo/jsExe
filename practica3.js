@@ -1,59 +1,5 @@
-
-/*
 // PARTE 1
-Recorre un arreglo usando un callback, imprime cada elemento
-Haz varios callbacks de forma que se imprima:
-1 después de 3 segundos
-2 después de 1 segundo
-3 después de 4 segundos
-En consola debería verse 2 1 3
-Escribe un callback que recibe un argumento y lo imprime
-Crea una función que recibe el callback anterior y lo ejecuta
-Crea una función que llama a un callback y usa el valor que regresa para llamar a otro. Después debe llamar a un tercer callback con el valor que regresa el segundo
-
-*/
-
-/* Recorre un arreglo usando un callback, imprime cada elemento
-Haz varios callbacks de forma que se imprima:
-1 después de 3 segundos
-2 después de 1 segundo
-3 después de 4 segundos
-En consola debería verse 2 1 3 
-*/
-
-
-setTimeout(()=> console.log(2000));
-setTimeout([2],6000);
-setTimeout([3],8000);
-
-
-[1,2,3].forEach(t => alert(t));
-setTimeout(foo, 3000);
-
-
-[1,2,3].forEach (function printt = (alert(printt));
-setTimeout([0],3000);
-setTimeout([2],6000);
-setTimeout([3],8000);
-
-funcion imprimelos(){
-let uno = 1;
-let dos = 2;
-let tres = 3;
-
-    no1 (){
-    setTimeout(uno, 3000);
-};
-
-function no2 (){
-    setTimeout(dos, 1000);
-};
-
-function no3 (){
-    setTimeout(tres, 8000);
-};
-
-}console.log(imprimelos);
+// Recorre un arreglo usando un callback, imprime cada elemento
 
 /* Funciona así 
 
@@ -65,6 +11,51 @@ miArreglo.forEach(function(y)){
     console.log(y)
 }
 */
+
+var arreglo = [1, 2, 3, 4, 5]
+  arreglo.forEach(function(v){
+    console.log(v)
+  })
+
+
+/*
+Haz varios callbacks de forma que se imprima:
+1 después de 3 segundos
+2 después de 1 segundo
+3 después de 4 segundos
+En consola debería verse 2 1 3
+*/
+function tiempos() {
+  let uno = () => 
+      console.log(1);
+      setTimeout(uno, 3000) 
+  let dos = () => 
+      console.log(2);
+      setTimeout(dos, 1000)
+  let tres = () => 
+      console.log(3);
+      setTimeout(tres, 4000)
+}
+tiempos()
+
+
+//Escribe un callback que recibe un argumento y lo imprime
+let verduras = ['Cebollas', 'Lechuga', 'Apio', 'Tomates', 'Blocoli'];
+let argumento = verdura => console.log('Necesitas comprar: '+ verdura);
+let pedido = verduras.forEach(verdura => console.log('Necesitas comprar: '+ verdura));
+
+
+// Crea una función que recibe el callback anterior y lo ejecuta
+function llamada => 
+
+
+//Crea una función que llama a un callback y usa el valor que regresa para llamar a otro. Después debe llamar a un tercer callback con el valor que regresa el segundo
+
+
+
+
+
+
 
 
 

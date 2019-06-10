@@ -18,23 +18,35 @@ alert("el área de tu triángulo es :" + calArea);
 }
 
 // función pidiendo los 3 lados
+function triArea() { 
+  l1 = parseInt(prompt("introduce la medida 1"));
+  l2= parseInt(prompt("introduce la medida 2"));
+  l3 = parseInt(prompt("introduce la medida 3"));
+  triangPer= (l1 + l2 + l3) / 2;
+  area= Math.sqrt(triangPer * (triangPer - l1) *  (triangPer - l2) *  (triangPer - l3));
+    alert("El área de tu triángulo es: " + area);
+  }
+triArea();
+
+
 
 
 // Voltea una string dada por el usuario
 function volteaString(){
     var string = prompt("introduce el texto que deseas invertir");
-    alert(string.reverse());
+    var separar = string.split("");
+    alert(separar.reverse(string).join(""));
 }
 
 // Voltea una string dada por el usuario sin usar el método de reverse
 var cadena = prompt("Escribe la frase que quieres invertir");
-var cadenarevertida = "";  
+var cadenaRevertida = "";  
 //Iterar la cadena de manera inversa
 for(var i = cadena.length-1; i>=0; i--){
 //Se concatena el valor a la cadena resultado
-  cadenarevertida += cadena[i];
+  cadenaRevertida += cadena[i];
 }
-alert("la cadena invertida es: "+ cadenarevertida);
+alert("la cadena invertida es: "+ cadenaRevertida);
 
 
 // Convierte una temperatura dada en C o F a F o C, respectivamente
@@ -45,7 +57,7 @@ alert("la cadena invertida es: "+ cadenarevertida);
   60C: 140F
   45C: 7.222222222222222C
 */
-function convErt(){ 
+function temperature(){ 
 var equiv = parseInt(prompt("¿Cuántos grados quieres convertir?"));
 var unidad = prompt("Escribe si quieres convertir a C o F");
   if (unidad.value = "F"){
@@ -80,6 +92,13 @@ console.log(usuario);
 usuario.nuevaPropiedad = true;
 
 
+
+
+// MANERA MEJORADA
+//*** */
+
+
+
 // Realiza la suma de los valores que de el usuario hasta recibir un valor negativo
 function sumaMas(){
   var num1 = parseInt(prompt('Introduce un número'))
@@ -91,6 +110,17 @@ function sumaMas(){
     }
     alert('La suma es: ' + num2 + "  // Para seguir sumando debes ingresar sólo números positivos");
 }
+
+// FUNCIÓN CORREGIDA
+function sumar(){
+  var num1=parseInt(prompt('Introduce un número'))
+  var num2 = 0
+  while (num1>= 0){
+    num2+=num1;
+    var num1=parseInt(prompt('Introduce un número'));
+  }
+  alert('La suma es: ' + ' ' + num2+  " /Para seguir sumando debes ingresar sólo números positivos");
+};
 
 
 // Para sumar dos números hasta que uno de los dos es negativo
@@ -122,6 +152,20 @@ function multiple(valor, multiple){
         alert("el número " + valor + " es múltiplo de " + multiple);
       } else if (resto % 7 === 0){
         alert("el número " + valor + " es múltiplo de " + multiple);
+      } else{ 
+        alert("el número que introdujiste no es múltiplo de 3 o 7");
+      }
+};
+
+
+// CORREGIDA
+function multiple(valor, multiple){
+  var valor = parseInt(prompt("Ingresa el número que quieres revisar"));
+  resto = valor % multiple;
+    if(resto % 3 === 0) {
+        alert("el número " + valor + " es múltiplo de 3");
+      } else if (resto % 7 === 0){
+        alert("el número " + valor + " es múltiplo de 7");
       } else{ 
         alert("el número que introdujiste no es múltiplo de 3 o 7");
       }
@@ -163,6 +207,7 @@ function numCentenas(){
 };
 
 
+
 // Regresa todos los caracteres que no sean letras de una cadena
 function puraLetra(){
   var dameLaCadena = prompt(" Introduce texto y números")
@@ -186,14 +231,38 @@ function errOr() {
   console.error(mensajeU);
 }
 
+// CORREGIDA
+function errOr2() {
+  var mensajeU2 = prompt("Escribe tu mensaje");
+  throw new Error(mensajeU2);
+}
+
+
+
 // Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
 function errOr() {
   var mensajeU = prompt("Escribe tu mensaje");
-  try{
+  try {
     mensajeU();
   } catch(error){
   console.error(mensajeU);
 }
+
+// CORREGIDA
+function errOr2() {
+  var mensajeU2 = prompt("Escribe tu mensaje");
+  throw new Error(mensajeU2);
+}
+function errorCatch() {
+  try {
+  errOr2();
+  } catch(Error) {
+  alert(Error.stack); 
+  }
+}
+errorCatch();
+
+
 
 
 // Suma los contenidos de un arreglo de números
@@ -218,6 +287,7 @@ function arralCuadrado(){
 }
 // HAY ERROR / No se imprime el cuadrado el último número
 
+//CORRECCIÓN PENDIENTE
 
 
 // Regresa que tipo de ángulo es el dado
@@ -229,7 +299,7 @@ function arralCuadrado(){
 */
 function calculaAngulo(){
   var angulo= parseInt(prompt("Ingresa los grados de tu ángulo"))
-  if(angulo < 90 & angulo > 0){
+  if(angulo < 90 && angulo > 0){
     alert("Un ángulo de: "+ angulo + " º es agudo")
   }else if(angulo === 90){
     alert("Un ángulo de: "+ angulo + " º es recto")
@@ -301,6 +371,16 @@ alert(iguales);
 
 
 // Valida que una cadena dada no tenga espacios en blanco
+function validarNombre() {
+  var cadenaD = prompt("introduce un texto sin espacios"); 
+  if (cadenaD.indexOf(" ") > -1) {
+      alert("Tu texto contiene espacios en blanco");
+      return false
+  } else {
+    alert("Tu texto no contiene espacios en blanco");
+    return true
+  }
+}
 
 
 // Dada una cadena, determina su valor de scrabble
@@ -314,7 +394,16 @@ alert(iguales);
   10: Q, Z
 */
 
+
+
+
 // Determina si una cadena dada por el usuario es un acrónimo
+
+
+
+
+
+
 // Implementa una lista ligada
 // Implementa una lista doblemente ligada
 // Obten el Máximo común divisor de dos números dados

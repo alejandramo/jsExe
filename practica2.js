@@ -1,19 +1,38 @@
 // Escribe una función llamada calculateDogAge que reciba un número (la edad humana del perro) y calcule su edad en años de perro (edad x 7)
-function calculateDogAge(){
+function calculateDogAge(edadHumanaDePerrit){
     var edadHumanaDePerrit = Number(prompt("¿Cuál es la edad humana de perrit?"));
     var edadPerritDePerrit = (edadHumanaDePerrit)*7;
     alert ("Perrit tiene: " + edadPerritDePerrit + " en edad perrit");
 };
+
+//CON TEMPLATE STRINGS ` `
+function calculateDogAge(edadHumanaDePerrit){
+  var edadHumanaDePerrit = Number(prompt("¿Cuál es la edad humana de perrit?"));
+  var edadPerritDePerrit = (edadHumanaDePerrit)*7;
+  alert (`Perrit tiene: ${edadPerritDePerrit} en edad perrit`);
+};
+
+
 
 // Escribe una función llamada getCandySupply que reciba dos números (edad, cantidad por día) y calcule cuantos dulces consumirías por el resto de tu vida.
     // El resto de tu vida es definido por una edad constante (por ejemplo, 75 años)
 function  getCandySupply(edad, cantidadXdia){
     var edad = Number(prompt("¿Cuál es tu edad?"));
     var cantidadXdia = Number(prompt("¿Cuántos dulces comes al día?"));
-    const tiempodevidapromedio = Number(90);
+    const tiempodevidapromedio = 90;
     var dulcesporcomer = (365*(tiempodevidapromedio-edad)*cantidadXdia);
     alert("Si sigues comiendo " + cantidadXdia + " de dulces, cuando tengas " + tiempodevidapromedio + " te habras comido " + dulcesporcomer + " dulces");
 };
+
+//CON TEMPLATE STRINGS ` `
+function  getCandySupply(edad, cantidadXdia){
+  var edad = Number(prompt("¿Cuál es tu edad?"));
+  var cantidadXdia = Number(prompt("¿Cuántos dulces comes al día?"));
+  const tiempodevidapromedio = 90;
+  var dulcesporcomer = (365*(tiempodevidapromedio-edad)*cantidadXdia);
+  alert(`Si sigues comiendo ${cantidadXdia} de dulces, cuando tengas  ${tiempodevidapromedio} te habras comido ${dulcesporcomer} dulces`);
+};
+
 
 
 // Crea una función que permita encadenar llamadas
@@ -37,6 +56,7 @@ function saludo(){
 }
 
 //FORMA 2 -
+// CORRECTA
 function saludoFormal(){
     alert("Buenos días");
 }
@@ -181,7 +201,10 @@ function someFunction(number) {
 
 var firstResult = someFunction(9);
 var result = firstResult(2);
+--> La salida es return otherFunction; y return a, porque a pesar de que a está escrito antes, 
+está dentro del la función que imprime la otra función, después entra e imprime a
 */
+
 
 /*
 var fullname = 'A Name';
@@ -198,6 +221,10 @@ console.log(obj.prop.getFullname());
 var aCall = obj.prop.getFullname;
 console.log(aCall());
 console.log(obj.fullname);
+
+--> La salida es Le Name porque el primer console.log apunta a la función getFullname que llama a fullname.
+Después se imprime A Name porque se llama a la variable aCall definida una línea antes
+Al final se imprime Full Name porque es un console.log al atributo fullname del objeto obj 
 */
 
 /*
@@ -209,6 +236,8 @@ function b() {
 }
 b();
 console.log(a);
+--> la salida es 1 porque no se hace ninguna llamada a la función en la que se cambia el valor de a
+y se hace el console.log desde afuera de la función
 */
 
 /*
@@ -217,6 +246,23 @@ console.log(a);
   Agrega un método (describe) que regrese una cadena como esta:
   {Nombre} {Apellido}, {edad} años.
 */
+class persona{
+  constructor(nombre, apellido, edad){
+  this.nombre= nombre;
+  this.apellido = apellido;
+  this.edad = edad;
+}
+  get describe(){
+    return `${this.nombre} ${this.apellido} ${this.edad}`;  
+  }
+}
+// agregar persona 
+var personas = new persona ("Daniela", "Paredes", 29)
+// método para cambiar propiedad
+persona.nombre = "Rubén"
+persona.apellido = "Saucedo"
+persona.nombre = 23
+
 
 /*
   Crea una clase Product que recibe un nombre y un valor
@@ -230,3 +276,15 @@ console.log(a);
   su método value regresa el valor sin iva
   Esta clase debería poder usarse en Cart
 */
+
+// 
+class Product{
+  constructor(nombre,valor){
+  this.nombre = nombre
+  this.valor = valor
+  }
+  get valorIVA(){
+    var conIVA= this.valor*(1.16);
+    retur(`precio con IVA ${conIVA}`)
+  }
+}
